@@ -1,10 +1,12 @@
-$("#btn-all").click(function() {
-  $("html, body").animate(
-    {
-      scrollTop: $("#scrollTo").offset().top
-    },
-    700
-  );
+$(document).ready(function() {
+  $("#btn-all").click(function() {
+    $("html, body").animate(
+      {
+        scrollTop: $("#scrollTo").offset().top
+      },
+      700
+    );
+  });
 });
 
 $(".btn").click(function() {
