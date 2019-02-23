@@ -1,0 +1,42 @@
+{
+	"bt1" : {
+		"contact1": {
+			"name": "Afeedh1",
+			"email": "lolafeedh1@gmail.com",
+			"phone": "+91-984561235"
+		},
+		"contact2": {
+			"name": "Afeedh2",
+			"email": "lolafeedh2@gmail.com",
+			"phone": "+91-984561235"
+		}
+	},
+
+	"bt2" : {
+		"contact1": {
+			"name": "Abin1",
+			"email": "lolabin1@gmail.com",
+			"phone": "+91-989898989"
+		},
+		"contact2": {
+			"name": "Abin2",
+			"email": "lolabin2@gmail.com",
+			"phone": "+91-696969696"
+        },
+        "contact3": {
+			"name": "Zani",
+			"email": "2z4@gmail.com",
+			"phone": "+91-69969669"
+        },
+        "contact4": {
+			"name": "Sun",
+			"email": "jfjfjf@gmail.com",
+			"phone": "+91-7658040"
+        },
+        "contact5": {
+			"name": "LOL",
+			"email": "lolpapa@gmail.com",
+			"phone": "+91-696969696"
+		}
+	}
+}
