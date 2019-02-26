@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#btn-all").click(function() {
+    //event.preventDefault();
     $("html, body").animate(
       {
         scrollTop: $("#scrollTo").offset().top
