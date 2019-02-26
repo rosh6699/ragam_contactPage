@@ -1,24 +1,39 @@
-html, body, section {
-  height: 100%;
+
+body{
+  height: 100vh;
 }
 
-.header
-{
-  margin : 0px auto;
+.header {
+  margin: 0px auto;
 }
 
 body {
-  position: fixed;
   min-width: 100%;
-  margin: 40px 0;
+  margin: 0 40px 0 0;
   font-family: "Montserrat";
   font-size: 14px;
   font-weight: 900;
   background-color: #233142;
   -webkit-font-smoothing: antialiased;
   background: url(/bg1.jpg);
-  background-attachment: fixed; 
+  background-attachment: fixed;
+} /* width */
+*::-webkit-scrollbar {
+  width: 8px;
 }
+
+/* Track */
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background-color: #cccccc33;
+  border-radius: 10px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #26c281;
+  border-radius: 10px;
+} 
 
 .title {
   font-family: "Montserrat";
@@ -27,39 +42,39 @@ body {
   color: #ffffff;
   text-align: center;
   justify-content: center;
-
-  }
+}
 
 .title1 {
   font-family: "Montserrat";
   font-size: 1em;
   font-weight: 400;
   color: #ffffff;
-    }
+}
 
 p {
   line-height: 1.5em;
 }
 
-h1 + p, p + p {
+h1 + p,
+p + p {
   margin-top: 10px;
 }
 
-
 .container {
-  overflow: scroll;
+  overflow: auto;
   height: 82.5vh;
-  padding-top: 10px;  
+  padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
   max-width: 50%;
   flex-direction: row;
   justify-content: center;
   display: flex;
+  transition: width 500ms ease-in;
 }
 
 .clearfloat {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -82,7 +97,7 @@ h1 + p, p + p {
 }
 .cards li:after,
 .cards li:before {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -148,10 +163,10 @@ h1 + p, p + p {
   content: "\f003";
 }
 .cards li:hover {
-  background: rgba(235, 237, 189, 0.5);
+  background:#26c281;
   transition: all 0.2s ease-in-out;
   -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  transform: scale(1.03);
 }
 .cards li:hover img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -159,7 +174,7 @@ h1 + p, p + p {
 }
 .cards li:hover .details {
   transition: all 0.5s ease-in-out;
-  text-shadow: 1px 1px ;
+  text-shadow: 1px 1px #dfe295;
 }
 @media (max-width: 550px) {
   .cards li {
@@ -192,33 +207,28 @@ h1 + p, p + p {
   }
 }
 
-
-
-
-
 .btn-container {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin : 0px auto;
+  margin: 0px auto;
   margin-top: 40px;
   margin-bottom: 10px;
+  max-width: 100%;
 }
 
 .btn {
-  margin-top: 10px; 
-  margin-left: 10px; 
+  margin-top: 10px;
   background-color: #2e3131;
   color: white;
-  padding: 1rem 2.5rem;
+  padding: 1.3rem 2.5rem;
   border-radius: 5px;
   -moz-user-select: none;
   user-select: none;
   cursor: pointer;
   text-align: center;
-  transition: all .2s, transform .1s;
+  transition: all 0.2s, transform 0.1s;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
@@ -238,14 +248,15 @@ h1 + p, p + p {
 }
 
 p {
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .btn-p2 {
   position: absolute;
-  top: -1.8rem;
-  left : 30%;
+  top: -1.5rem;
+  left: 20%;
   text-align: center;
+  margin: auto;
 }
 
 .active {
@@ -254,32 +265,28 @@ p {
 
 .activep1 {
   transform: translateY(4rem);
-  margin : 0px auto;
+  margin: 0px auto;
   text-align: center;
 }
 
 .activep2 {
   top: 10%;
-  margin : 0px auto;
+  margin: 0px auto;
   text-align: center;
 }
 
-.right-half
-{
+.right-half {
   max-width: 50%;
   background: #000000;
 }
 
-.wrapper
-{
+.wrapper {
   width: 100%;
   margin-top: 50px;
   display: flex;
   flex-direction: row;
-  overflow: hidden;
-  padding : 0;
-  margin-bottom: 0px;
-  position: fixed;
+  padding: 0;
+  margin-bottom: 0px; 
 }
 
 .left-half {
@@ -292,11 +299,9 @@ p {
   width: 50%;
   height: 80vh;
   margin: 0 auto;
-  padding: 1rem;
   position: relative;
-  overflow: scroll;
+  overflow: auto;
   margin-bottom: 10px;
-  
 }
 
 /*.right-half {
@@ -315,36 +320,32 @@ p {
 
 }*/
 
-.left-wrapper
-{
+.left-wrapper {
   display: flex;
   flex-direction: row;
   margin: 0px auto;
   transform: scale(1.15);
   padding-top: 0px;
-  margin-top : 0px;
-  min-width:  50%;
+  min-width: 50%;
 }
 
 /**Media Queries**/
-@media only screen and (max-width: 800px)
-{
+@media only screen and (max-width: 800px) {
   .wrapper {
     display: flex;
     flex-direction: column;
     overflow: visible;
     position: static;
-  }
-  
+}
+
   .left-half {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    overflow: visible;    
+    overflow: auto;
   }
 
-  .left-wrapper
-  {
+  .left-wrapper {
     max-width: 100%;
     flex-direction: column;
   }
@@ -352,10 +353,7 @@ p {
   .container {
     overflow: visible;
     max-width: 100%;
-    margin-top: 100px;
   }
-
-
 
   body {
     position: static;
